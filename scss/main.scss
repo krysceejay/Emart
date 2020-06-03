@@ -48,11 +48,24 @@ p {
   margin: 0.3rem 0;
 }
 
+div[class^="btn-"],
+.btn-group {
+  outline: 0;
+  box-shadow: 0;
+  border: 0;
+  &:focus,
+  &:hover {
+    outline: 0;
+    box-shadow: 0;
+    border: 0;
+  }
+}
+
 #main-nav {
   display: flex;
   //position: sticky;
   //top: 0;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 0.5rem 2rem;
   //background: $secondary-color;
@@ -72,19 +85,13 @@ p {
       border-bottom: 3px transparent solid;
       padding-bottom: 0.5rem;
       transition: border-color 0.5s;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
 
       &:hover {
         color: $main-color;
       }
       &.current {
         color: $main-color;
-      }
-    }
-    .parent-sub-menu {
-      &:hover ul {
-        position: absolute;
-        top: 3rem;
       }
     }
   }
@@ -97,7 +104,7 @@ p {
     position: relative;
     border-radius: 5px;
     line-height: 0;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
     .form-sub {
       display: inline-block;
       //border: 1px solid #555;
@@ -134,8 +141,123 @@ p {
   }
 }
 
+#minor-nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-around;
+  align-items: center;
+  //padding: 0.2rem 2rem;
+  background: $main-color;
+  z-index: 1;
+  color: #feffff;
+  ul {
+    display: flex;
+    li {
+      position: relative;
+      padding: 1rem 1.5rem;
+    }
+
+    a {
+      text-decoration: none !important;
+      color: #feffff;
+      text-transform: uppercase;
+      border-bottom: 3px transparent solid;
+      padding-bottom: 0.5rem;
+      transition: border-color 0.5s;
+      font-size: 0.8rem;
+
+      &:hover {
+        color: $secondary-color;
+      }
+      &.current {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.slideshow-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 600px;
+  color: #fff;
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:first-child {
+      background: url("../img/slide1.jpg") no-repeat center center/cover;
+    }
+    &:nth-child(2) {
+      background: url("../img/slide2.jpg") no-repeat center center/cover;
+    }
+    &:nth-child(3) {
+      background: url("../img/slide3.jpg") no-repeat center center/cover;
+    }
+
+    .content {
+      padding: 1.5rem;
+      width: 70%;
+
+      h1 {
+        font-size: 3rem;
+        background-color: $overlay-color;
+        padding: 2rem;
+      }
+
+      p {
+        letter-spacing: 5px;
+        font-size: 1.5rem;
+        margin: 20px 0;
+      }
+    }
+  }
+  .active-slide {
+    opacity: 1;
+  }
+}
+
+button#next {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+button#prev {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+.btn-slide {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: #feffff;
+    color: $secondary-color;
+  }
+}
+
 footer {
-  background: $secondary-color;
+  background: $main-color;
   padding: 1.5rem;
   color: $light-color;
   text-align: center;

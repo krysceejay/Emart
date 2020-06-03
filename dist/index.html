@@ -15,12 +15,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <title>Blog</title>
+    <title>Emart</title>
   </head>
   <body>
     <nav id="main-nav">
       <!-- <img src="img/logo.png" alt="My Portfolio" id="logo" /> -->
-      <h1><span class="text-primary">WONDERFUL</span>LOGO</h1>
+      <h1><span class="text-primary">WONDERFUL</span> LOGO</h1>
       <div>
         <ul>
           <li><a href="index.html" class="current">Shop Locator</a></li>
@@ -53,20 +53,56 @@
       <div>Category</div>
       <div>
         <ul>
-          <li>Home</li>
-          <li>Home</li>
-          <li>Home</li>
-          <li>Home</li>
-          <li>Home</li>
-          <li>Home</li>
-          <li>Home</li>
+          <li><a href="index.html" class="current">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="work.html">Kitchen</a></li>
+          <li><a href="contact.html">Household</a></li>
+          <li><a href="contact.html">Faqs</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>
+
+    <!-- Slideshow container -->
+    <section class="slideshow-container">
+      <div class="slide active-slide">
+        <div class="content">
+          <h1>Healthy Savings</h1>
+          <p>
+            Get Up To 30% off
+          </p>
+          <button class="btn-shop-now">Shop Now</button>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <h1>Big Deal</h1>
+          <p>
+            Get Best Offer up to 20%
+          </p>
+          <button class="btn-shop-now">Shop Now</button>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="content">
+          <h1>Big Save</h1>
+          <p>
+            Get Flat 10% Back
+          </p>
+          <button class="btn-shop-now">Shop Now</button>
+        </div>
+      </div>
+    </section>
+    <button id="prev" class="btn-slide">
+      <i class="fa fa-arrow-left"></i>
+    </button>
+    <button id="next" class="btn-slide">
+      <i class="fa fa-arrow-right"></i>
+    </button>
+
+    <!-- / End Header -->
     <section id="blog-sec" class="py-4">
-      <div class="container">
-        <div class="sec-view">
-          <!-- <aside class="blog-sec-view-aside">
+      <!-- <aside class="blog-sec-view-aside">
             <h2>Top Post</h2>
             <div class="topost-content">
               <div class="topost-content-single">
@@ -131,11 +167,10 @@
               </div>
             </div>
           </aside> -->
-        </div>
-      </div>
     </section>
     <footer>
       Copyright &copy; 2020, All Rights Reserved
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>
