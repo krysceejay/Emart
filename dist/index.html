@@ -65,108 +65,225 @@
 
     <!-- Slideshow container -->
     <section class="slideshow-container">
-      <div class="slide active-slide">
-        <div class="content">
-          <h1>Healthy Savings</h1>
-          <p>
-            Get Up To 30% off
-          </p>
-          <button class="btn-shop-now">Shop Now</button>
+      <div class="slideshow">
+        <div class="slide active-slide">
+          <div class="content">
+            <h1>Healthy Savings</h1>
+            <p>
+              Get Up To 30% off
+            </p>
+            <button class="btn-shop-now">Shop Now</button>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="content">
+            <h1>Big Deal</h1>
+            <p>
+              Get Best Offer up to 20%
+            </p>
+            <button class="btn-shop-now">Shop Now</button>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="content">
+            <h1>Big Save</h1>
+            <p>
+              Get Flat 10% Back
+            </p>
+            <button class="btn-shop-now">Shop Now</button>
+          </div>
         </div>
       </div>
-      <div class="slide">
-        <div class="content">
-          <h1>Big Deal</h1>
-          <p>
-            Get Best Offer up to 20%
-          </p>
-          <button class="btn-shop-now">Shop Now</button>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="content">
-          <h1>Big Save</h1>
-          <p>
-            Get Flat 10% Back
-          </p>
-          <button class="btn-shop-now">Shop Now</button>
-        </div>
-      </div>
+
+      <button id="prev" class="btn-slide">
+        <i class="fa fa-arrow-left"></i>
+      </button>
+      <button id="next" class="btn-slide">
+        <i class="fa fa-arrow-right"></i>
+      </button>
     </section>
-    <button id="prev" class="btn-slide">
-      <i class="fa fa-arrow-left"></i>
-    </button>
-    <button id="next" class="btn-slide">
-      <i class="fa fa-arrow-right"></i>
-    </button>
+    <!-- / End Slide -->
 
-    <!-- / End Header -->
-    <section id="blog-sec" class="py-4">
-      <!-- <aside class="blog-sec-view-aside">
-            <h2>Top Post</h2>
-            <div class="topost-content">
-              <div class="topost-content-single">
-                <div class="topost-content-single-img">
-                  <img src="./img/b4.jpg" alt="" />
+    <section id="prod-sec" class="py-4">
+      <div class="container">
+        <div id="prod-sec-content">
+          <div class="new-arrival">
+            <h3>New Arrivals</h3>
+            <div class="new-arrival-prod">
+              <div class="new-arrival-prod-content">
+                <div class="prod-img">
+                  <img src="./img/suade-img.jpg" alt="" />
                 </div>
-                <div class="topost-content-single-text">
-                  Pellentesque dui, non felis. Maecenas male non felis...
-                  <ul>
-                    <li><i class="fa fa-calendar"></i> Feb 15, 2020</li>
-                  </ul>
+                <div class="prod-text">
+                  <div class="prod-text-name">
+                    Suade Shoe Men
+                  </div>
+                  <div class="stars" style="--rating: 3.5;"></div>
+                  <div class="prod-text-price">
+                    <del class="old-price">
+                      &#8358;100
+                    </del>
+                    <span class="new-price">
+                      &#8358;70
+                    </span>
+                  </div>
+                  <button class="btn-add-to-cart">Add To Cart</button>
                 </div>
               </div>
-              <div class="topost-content-single">
-                <div class="topost-content-single-img">
-                  <img src="./img/b4.jpg" alt="" />
+              <div class="new-arrival-prod-content">
+                <div class="prod-img">
+                  <img src="./img/hangbag-img.jpg" alt="" />
                 </div>
-                <div class="topost-content-single-text">
-                  Pellentesque dui, non felis. Maecenas male non felis...
-                  <ul>
-                    <li><i class="fa fa-calendar"></i> Feb 15, 2020</li>
-                  </ul>
+                <div class="prod-text">
+                  <div class="prod-text-name">
+                    Hand Bag
+                  </div>
+                  <div class="stars" style="--rating: 4.5;"></div>
+                  <div class="prod-text-price">
+                    <del class="old-price">
+                      &#8358;100
+                    </del>
+                    <span class="new-price">
+                      &#8358;70
+                    </span>
+                  </div>
+                  <button class="btn-add-to-cart">Add To Cart</button>
                 </div>
               </div>
-              <div class="topost-content-single">
-                <div class="topost-content-single-img">
-                  <img src="./img/b4.jpg" alt="" />
+              <div class="new-arrival-prod-content">
+                <div class="prod-img">
+                  <img src="./img/bag-img.jpeg" alt="" />
                 </div>
-                <div class="topost-content-single-text">
-                  Pellentesque dui, non felis. Maecenas male non felis...
-                  <ul>
-                    <li><i class="fa fa-calendar"></i> Feb 15, 2020</li>
-                  </ul>
+                <div class="prod-text">
+                  <div class="prod-text-name">
+                    School Bag
+                  </div>
+                  <div class="stars" style="--rating: 3;"></div>
+                  <div class="prod-text-price">
+                    <del class="old-price">
+                      &#8358;100
+                    </del>
+                    <span class="new-price">
+                      &#8358;70
+                    </span>
+                  </div>
+                  <button class="btn-add-to-cart">Add To Cart</button>
                 </div>
               </div>
             </div>
-            <div class="newsletter-sub">
-              <h2>Sign up to our newsletter</h2>
-              <form action="">
-                <div class="newsletter-sub-form my-1">
-                  <input type="email" placeholder="your email" />
-                  <button type="submit" class="btn btn-main">Submit</button>
+          </div>
+          <div class="best-sellers">
+            <h3>Best Seller</h3>
+            <div class="best-sellers-prod">
+              <div class="best-sellers-prod-content">
+                <div class="prod-img">
+                  <img src="./img/noodles-img.jpg" alt="" />
                 </div>
-              </form>
-            </div>
-
-            <div class="connect-socials">
-              <h2>Stay Connected</h2>
-              <div class="connect-socials-icons my-1">
-                <a href="www.twitter.com">
-                  <i class="fa fa-twitter fa-2x"></i>
-                </a>
-                <a href="www.facebook.com">
-                  <i class="fa fa-facebook fa-2x"></i>
-                </a>
-                <a href="www.facebook.com">
-                  <i class="fa fa-instagram fa-2x"></i>
-                </a>
-                <a href="www.youtube.com">
-                  <i class="fa fa-youtube fa-2x"></i>
-                </a>
+                <div class="prod-text">
+                  <div class="prod-text-name">
+                    Indomie Noodles
+                  </div>
+                  <div class="stars" style="--rating: 3.5;"></div>
+                  <div class="prod-text-price">
+                    <del class="old-price">
+                      &#8358;100
+                    </del>
+                    <span class="new-price">
+                      &#8358;70
+                    </span>
+                  </div>
+                  <button class="btn-add-to-cart">Add To Cart</button>
+                </div>
+              </div>
+              <div class="best-sellers-prod-content">
+                <div class="prod-img">
+                  <img src="./img/goil-img.jpg" alt="" />
+                </div>
+                <div class="prod-text">
+                  <div class="prod-text-name">
+                    Groundnut Oil
+                  </div>
+                  <div class="stars" style="--rating: 4.5;"></div>
+                  <div class="prod-text-price">
+                    <del class="old-price">
+                      &#8358;100
+                    </del>
+                    <span class="new-price">
+                      &#8358;70
+                    </span>
+                  </div>
+                  <button class="btn-add-to-cart">Add To Cart</button>
+                </div>
+              </div>
+              <div class="best-sellers-prod-content">
+                <div class="prod-img">
+                  <img src="./img/cashewnut-img.jpeg" alt="" />
+                </div>
+                <div class="prod-text">
+                  <div class="prod-text-name">
+                    Cashew Nuts
+                  </div>
+                  <div class="stars" style="--rating: 3;"></div>
+                  <div class="prod-text-price">
+                    <del class="old-price">
+                      &#8358;100
+                    </del>
+                    <span class="new-price">
+                      &#8358;70
+                    </span>
+                  </div>
+                  <button class="btn-add-to-cart">Add To Cart</button>
+                </div>
               </div>
             </div>
-          </aside> -->
+          </div>
+          <div class="featured">
+            <h3>Featured Products</h3>
+            <div class="featured-prod">
+              <div class="featured-prod-content">
+                <div class="prod-img">
+                  <img src="./img//handbag2-img.jpg" alt="" />
+                </div>
+                <div class="prod-text">
+                  <div class="prod-text-name">
+                    Hand Bag
+                  </div>
+                  <div class="stars" style="--rating: 3.5;"></div>
+                  <div class="prod-text-price">
+                    <del class="old-price">
+                      &#8358;2000
+                    </del>
+                    <span class="new-price">
+                      &#8358;1500
+                    </span>
+                  </div>
+                  <button class="btn-add-to-cart">Add To Cart</button>
+                </div>
+              </div>
+              <div class="featured-prod-content">
+                <div class="prod-img">
+                  <img src="./img/shoe-img.jpg" alt="" />
+                </div>
+                <div class="prod-text">
+                  <div class="prod-text-name">
+                    Sneakers
+                  </div>
+                  <div class="stars" style="--rating: 4.5;"></div>
+                  <div class="prod-text-price">
+                    <del class="old-price">
+                      &#8358;5000
+                    </del>
+                    <span class="new-price">
+                      &#8358;4500
+                    </span>
+                  </div>
+                  <button class="btn-add-to-cart">Add To Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <footer>
       Copyright &copy; 2020, All Rights Reserved

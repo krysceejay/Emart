@@ -68,6 +68,18 @@
     margin-top: 1rem;
     border: 0;
   }
+
+  &-add-to-cart {
+    @extend %btn-shared;
+    border-radius: 5px;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid $main-color;
+    font-size: 0.8rem;
+    //font-weight: bold;
+    background-color: $main-light-color;
+    margin-top: 0.7rem;
+    letter-spacing: 1px;
+  }
 }
 
 button[class^="btn-"]:hover,
@@ -124,4 +136,24 @@ textarea:focus,
 select:focus {
   outline: none;
   border: 1px $main-color solid;
+}
+
+.stars {
+  $percent: calc(var(--rating) / 5 * 100%);
+
+  display: inline-block;
+  font-size: $star-size;
+  line-height: 1;
+
+  &:before {
+    content: "★★★★★";
+    //letter-spacing: 3px;
+    background: linear-gradient(
+      90deg,
+      $star-color $percent,
+      $star-background $percent
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
