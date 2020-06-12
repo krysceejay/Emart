@@ -63,3 +63,29 @@ if (auto) {
   //Run next slide at interval
   slideInterval = setInterval(nextSlide, intervalTime);
 }
+
+// const query = `
+//   mutation {
+//     registerUser(
+//       input:
+//       {email: "baba@gmail.com", firstName: "baba", lastName: "krys", passwordfield: "babahimself",
+//       passwordfieldConfirmation: "babahimself", username: "babahimself"}
+//       )
+//     {
+//       email
+//       firstName
+//       lastName
+
+//     }
+//   }
+// `;
+// const url = "https://shelfvibe.com/api/graphql/";
+// const opts = {
+//   method: "POST",
+//   headers: { "Content-Type": "application/json" },
+//   body: JSON.stringify({ query }),
+// };
+// fetch(url, opts)
+//   .then((res) => res.json())
+//   .then(console.log)
+//   .catch(console.error);

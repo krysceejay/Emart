@@ -221,6 +221,7 @@ div[class^="btn-"],
           font-size: 3rem;
           background-color: $overlay-color;
           padding: 2rem;
+          letter-spacing: 10px;
         }
 
         p {
@@ -426,6 +427,79 @@ button#prev {
       }
       .head-content {
         font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+#info {
+  .info-links {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem;
+
+    h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      color: $text-color;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+    }
+
+    &-contact {
+      div {
+        margin-bottom: 0.8rem;
+        i {
+          color: $secondary-color;
+          margin-right: 0.8rem;
+        }
+        span {
+          font-size: 0.9rem;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+    &-quicklinks {
+      li a {
+        font-size: 0.9rem;
+        color: $secondary-color;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+    &-followus {
+      .social-media {
+        display: flex;
+        justify-content: space-between;
+        //align-items: center;
+        i {
+          //margin-right: 0.5rem;
+          font-size: 1.5rem;
+          color: #555;
+          border-radius: 50%;
+
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+      .app-platforms {
+        h4 {
+          margin: 0.9rem auto;
+        }
+        .appstore {
+          //background-color: red;
+          height: 40px;
+          width: 80%;
+          margin-top: 0.5rem;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
       }
     }
   }
