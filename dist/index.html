@@ -20,7 +20,7 @@
   <body>
     <nav id="main-nav">
       <!-- <img src="img/logo.png" alt="My Portfolio" id="logo" /> -->
-      <h1><span class="text-primary">WONDERFUL</span> LOGO</h1>
+      <h1><span class="text-primary">WONDERFUL</span>LOGO</h1>
       <div>
         <ul>
           <li><a href="index.html" class="current">Shop Locator</a></li>
@@ -54,7 +54,7 @@
       <div>
         <ul>
           <li><a href="index.html" class="current">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
+          <li><a href="allitems.html">All Items</a></li>
           <li><a href="work.html">Kitchen</a></li>
           <li><a href="contact.html">Household</a></li>
           <li><a href="contact.html">Faqs</a></li>
@@ -112,7 +112,9 @@
             <div class="new-arrival-prod">
               <div class="new-arrival-prod-content">
                 <div class="prod-img">
-                  <img src="./img/suade-img.jpg" alt="" />
+                  <a href="">
+                    <img src="./img/suade-img.jpg" alt="" />
+                  </a>
                 </div>
                 <div class="prod-text">
                   <div class="prod-text-name">
@@ -283,6 +285,9 @@
             </div>
           </div>
         </div>
+        <div id="prod-sec-btn">
+          <button class="btn-view-all">View All</button>
+        </div>
       </div>
     </section>
     <section class="market">
@@ -312,7 +317,7 @@
       </div>
     </section>
     <section id="info">
-      <div class="info-links">
+      <div class="info-links py-4">
         <div class="info-links-contact">
           <h3>Contact Us</h3>
           <div>
@@ -371,6 +376,24 @@
         </div>
         <div class="info-links-sub">
           <h3>Subscribe</h3>
+          <p>Enter your email to subscribe to our newsletter</p>
+          <form name="sub-form" method="POST">
+            <div class="sub-form">
+              <span class="form-control-wrap">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  size="40"
+                  class="form-sub"
+                  placeholder="Your email"
+                />
+              </span>
+              <button type="submit" class="form-sub submit">
+                <i class="fa fa-chevron-right"></i>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>

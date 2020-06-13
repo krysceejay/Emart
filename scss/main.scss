@@ -96,50 +96,6 @@ div[class^="btn-"],
       }
     }
   }
-
-  /* Email Form */
-  .email-form {
-    width: 100%;
-    display: inline-block;
-    background-color: #fff;
-    position: relative;
-    border-radius: 5px;
-    line-height: 0;
-    margin-bottom: 1rem;
-    .form-sub {
-      display: inline-block;
-      //border: 1px solid #555;
-      outline: 0;
-      font-size: 0.9rem;
-      color: #555;
-      background-color: transparent;
-      font-family: inherit;
-      margin: 0;
-      padding: 0 3rem 0 1.5rem;
-      width: 100%;
-      height: 45px;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-    .submit {
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 45px;
-      height: 45px;
-      background-color: $main-color;
-      font-size: 1rem;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      outline: 0;
-      border: 0;
-      color: $secondary-color;
-      cursor: pointer;
-      border-radius: 0 5px 5px 0;
-    }
-  }
 }
 
 #minor-nav {
@@ -264,6 +220,12 @@ button#prev {
 }
 
 #prod-sec {
+  &-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+  }
   &-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -436,14 +398,13 @@ button#prev {
   .info-links {
     display: flex;
     justify-content: space-evenly;
-    padding: 3rem;
 
     h3 {
       font-size: 1rem;
       font-weight: bold;
       color: $text-color;
       letter-spacing: 3px;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     &-contact {
@@ -502,6 +463,31 @@ button#prev {
         }
       }
     }
+    &-sub {
+      p {
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+}
+
+#main-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 5rem;
+
+  &-aside {
+    flex: 1;
+    margin-right: 1rem;
+    padding: 1.5rem;
+    background-color: $main-light-color;
+  }
+  &-prod {
+    flex: 3;
+    background-color: #feffff;
+    padding: 1.5rem;
   }
 }
 
