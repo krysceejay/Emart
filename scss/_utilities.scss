@@ -5,6 +5,11 @@
   overflow: hidden;
 }
 
+hr {
+  margin: 0.9rem 0;
+  border: 1px dashed $medium-color;
+}
+
 .text-primary {
   color: $main-color !important;
 }
@@ -171,7 +176,8 @@ select:focus {
 
 /* Email Form */
 .email-form,
-.sub-form {
+.sub-form,
+.aside-form {
   display: inline-block;
   background-color: #fff;
   position: relative;
@@ -220,4 +226,39 @@ select:focus {
 /* Sub Form */
 .sub-form {
   width: 90%;
+}
+
+.aside-form {
+  .form-sub {
+    height: 40px;
+  }
+  .submit {
+    height: 40px;
+  }
+}
+
+.user-ratings {
+  direction: rtl;
+  display: inline-block;
+
+  input[type="radio"] {
+    display: none;
+    &:checked ~ label {
+      color: $star-color;
+    }
+  }
+  label {
+    color: $star-background;
+    padding-right: 1rem;
+    //margin-right: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    font-size: 1.3rem;
+
+    &:hover,
+    &:hover ~ label {
+      color: $star-color;
+    }
+  }
 }
