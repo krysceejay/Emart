@@ -36,7 +36,6 @@
               <input
                 type="email"
                 name="email"
-                id="email"
                 size="40"
                 class="form-sub"
                 placeholder="What item are you looking for today?"
@@ -65,9 +64,10 @@
 
     <main id="main-sec" class="py-3">
       <aside id="main-sec-aside">
-        <div class="aside-search">
-          <h4>Search here</h4>
-          <form action="">
+        <form action="">
+          <div class="aside-search">
+            <h4>Search here</h4>
+
             <div class="aside-form">
               <span class="form-control-wrap">
                 <input
@@ -78,74 +78,83 @@
                   placeholder="Item name..."
                 />
               </span>
-              <button type="submit" class="form-sub submit">
-                <i class="fa fa-chevron-right"></i>
-              </button>
             </div>
-          </form>
-        </div>
-        <hr />
-        <div class="aside-price">
-          <h4>Price range</h4>
-          <span>&#8358;100 - &#8358;10000</span>
-          <div class="aside-price-slider">
-            <input
-              type="range"
-              min="1"
-              max="100"
-              value="50"
-              class="slider"
-              id="myRange"
-            />
           </div>
-        </div>
-        <hr />
-        <div class="aside-review">
-          <h4>Customer Review</h4>
+          <hr />
+          <div class="aside-price">
+            <h4>Price range</h4>
 
-          <div class="user-ratings">
-            <input
-              id="star-5"
-              name="rating[rating]"
-              type="radio"
-              value="5"
-            /><label for="star-5" title="5 stars">
-              &#x2605;
-            </label>
-            <input
-              id="star-4"
-              name="rating[rating]"
-              type="radio"
-              value="4"
-            /><label for="star-4" title="4 stars">
-              &#x2605;
-            </label>
-            <input
-              id="star-3"
-              name="rating[rating]"
-              type="radio"
-              value="3"
-            /><label for="star-3" title="3 stars">
-              &#x2605;
-            </label>
-            <input
-              id="star-2"
-              name="rating[rating]"
-              type="radio"
-              value="2"
-            /><label for="star-2" title="2 stars">
-              &#x2605;
-            </label>
-            <input
-              id="star-1"
-              name="rating[rating]"
-              type="radio"
-              value="1"
-            /><label for="star-1" title="1 star">
-              &#x2605;
-            </label>
+            <div class="form-group-wrap">
+              <input type="number" placeholder="From" class="price-from" />
+
+              <input type="number" placeholder="To" />
+            </div>
+
+            <!-- <span id="min-price">&#8358;100</span> -
+          <span id="max-price">&#8358;10000</span>
+          <div class="aside-price-slider">
+            <input type="range" min="0" max="100" value="25" id="input-left" />
+            <input type="range" min="0" max="100" value="75" id="input-right" />
+
+            <div class="slider">
+              <div class="track"></div>
+              <div class="range"></div>
+              <div class="thumb left"></div>
+              <div class="thumb right"></div>
+            </div>
+          </div> -->
           </div>
-        </div>
+          <hr />
+          <div class="aside-review">
+            <h4>Customer Review</h4>
+
+            <div class="user-ratings">
+              <input
+                id="star-5"
+                name="rating[rating]"
+                type="radio"
+                value="5"
+              /><label for="star-5" title="5 stars">
+                &#x2605;
+              </label>
+              <input
+                id="star-4"
+                name="rating[rating]"
+                type="radio"
+                value="4"
+              /><label for="star-4" title="4 stars">
+                &#x2605;
+              </label>
+              <input
+                id="star-3"
+                name="rating[rating]"
+                type="radio"
+                value="3"
+              /><label for="star-3" title="3 stars">
+                &#x2605;
+              </label>
+              <input
+                id="star-2"
+                name="rating[rating]"
+                type="radio"
+                value="2"
+              /><label for="star-2" title="2 stars">
+                &#x2605;
+              </label>
+              <input
+                id="star-1"
+                name="rating[rating]"
+                type="radio"
+                value="1"
+              /><label for="star-1" title="1 star">
+                &#x2605;
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-filter">
+            Filter
+          </button>
+        </form>
       </aside>
       <section id="main-sec-prod">
         <div class="main-prod-view">
@@ -174,7 +183,7 @@
           <div class="main-prod-view-single">
             <div class="prod-img">
               <a href="">
-                <img src="./img/suade-img.jpg" alt="" />
+                <img src="./img/hangbag-img.jpg" alt="" />
               </a>
             </div>
             <div class="prod-text">
@@ -196,7 +205,7 @@
           <div class="main-prod-view-single">
             <div class="prod-img">
               <a href="">
-                <img src="./img/suade-img.jpg" alt="" />
+                <img src="./img/handbag2-img.jpg" alt="" />
               </a>
             </div>
             <div class="prod-text">
@@ -218,7 +227,7 @@
           <div class="main-prod-view-single">
             <div class="prod-img">
               <a href="">
-                <img src="./img/suade-img.jpg" alt="" />
+                <img src="./img/bag-img.jpeg" alt="" />
               </a>
             </div>
             <div class="prod-text">
@@ -240,7 +249,7 @@
           <div class="main-prod-view-single">
             <div class="prod-img">
               <a href="">
-                <img src="./img/suade-img.jpg" alt="" />
+                <img src="./img/goil-img.jpg" alt="" />
               </a>
             </div>
             <div class="prod-text">
@@ -352,7 +361,6 @@
                 <input
                   type="email"
                   name="email"
-                  id="email"
                   size="40"
                   class="form-sub"
                   placeholder="Your email"
@@ -369,6 +377,11 @@
     <footer>
       Copyright &copy; 2020, All Rights Reserved
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

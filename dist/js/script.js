@@ -1,91 +1,48 @@
-const slides = document.querySelectorAll(".slide");
-const next = document.querySelector("#next");
-const prev = document.querySelector("#prev");
-const auto = true;
-const intervalTime = 8000;
-let slideInterval;
+$(document).ready(function () {
+  const auto = true;
+  const intervalTime = 8000;
+  let slideInterval;
 
-const nextSlide = () => {
-  const current = document.querySelector(".active-slide");
-  //Remove current class
-  current.classList.remove("active-slide");
+  $("#next").click(function () {
+    nextSlide();
+  });
 
-  //Check for next slide
-  if (current.nextElementSibling) {
-    //Add current to next slide
-    current.nextElementSibling.classList.add("active-slide");
-  } else {
-    //Add current to first slide
-    slides[0].classList.add("active-slide");
-  }
+  $("#prev").click(function () {
+    prevSlide();
+  });
 
-  setTimeout(() => current.classList.remove("active-slide"));
-};
+  const nextSlide = () => {
+    const current = $(".active-slide");
+    current.removeClass("active-slide");
 
-const prevSlide = () => {
-  const current = document.querySelector(".active-slide");
-  //Remove current class
-  current.classList.remove("current");
+    if (current.next().length != 0) {
+      current.next().addClass("active-slide");
+    } else {
+      $(".slide:first-child").addClass("active-slide");
+    }
 
-  //Check for previous slide
-  if (current.previousElementSibling) {
-    //Add current to previous slide
-    current.previousElementSibling.classList.add("active-slide");
-  } else {
-    //Add current to last slide
-    slides[slides.length - 1].classList.add("active-slide");
-  }
+    setTimeout(() => current.removeClass("active-slide"));
+  };
 
-  setTimeout(() => current.classList.remove("active-slide"));
-};
+  const prevSlide = () => {
+    const current = $(".active-slide");
+    //Remove current class
+    current.removeClass("active-slide");
+    //Check for previous slide
+    if (current.prev().length != 0) {
+      //Add active-slide to previous slide
+      current.prev().addClass("active-slide");
+    } else {
+      //Add current to last slide
+      $(".slide:last-child").addClass("active-slide");
+    }
 
-//Button events
-next.addEventListener("click", (e) => {
-  nextSlide();
+    setTimeout(() => current.removeClass("active-slide"));
+  };
+
+  //Auto slide
   if (auto) {
-    clearInterval(slideInterval);
     //Run next slide at interval
     slideInterval = setInterval(nextSlide, intervalTime);
   }
 });
-
-prev.addEventListener("click", (e) => {
-  prevSlide();
-  if (auto) {
-    clearInterval(slideInterval);
-    //Run next slide at interval
-    slideInterval = setInterval(nextSlide, intervalTime);
-  }
-});
-
-//Auto slide
-if (auto) {
-  //Run next slide at interval
-  slideInterval = setInterval(nextSlide, intervalTime);
-}
-
-// const query = `
-//   mutation {
-//     registerUser(
-//       input:
-//       {email: "baba@gmail.com", firstName: "baba", lastName: "krys", passwordfield: "babahimself",
-//       passwordfieldConfirmation: "babahimself", username: "babahimself"}
-//       )
-//     {
-//       email
-//       firstName
-//       lastName
-
-//     }
-//   }
-// `;
-// const url = "https://shelfvibe.com/api/graphql/";
-// const opts = {
-//   method: "POST",
-//   headers: { "Content-Type": "application/json" },
-//   body: JSON.stringify({ query }),
-// };
-// fetch(url, opts)
-//   .then((res) => res.json())
-//   .then(console.log)
-//   .catch(console.error);

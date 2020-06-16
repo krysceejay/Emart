@@ -85,24 +85,36 @@ hr {
     padding: 0.8rem 2rem;
   }
 
+  &-filter {
+    @extend %btn-shared;
+    color: #fff;
+    background-color: $secondary-color;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+  }
+
   &-add-to-cart {
     @extend %btn-shared;
-    border-radius: 5px;
-    padding: 0.3rem 0.5rem;
+    border-radius: 0;
+    padding: 0.5rem 0.5rem;
     border: 1px solid $main-color;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     //font-weight: bold;
     background-color: $main-light-color;
     margin-top: 0.7rem;
     letter-spacing: 1px;
+    width: 100%;
   }
 }
 
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
-  // background-color: set-btn-hover-color($light-color);
-  // color: set-text-color($light-color);
+  //background-color: set-btn-hover-color($main-color);
+  //color: set-text-color($main-color);
   box-shadow: none;
   outline: none;
   z-index: 0;
@@ -230,9 +242,6 @@ select:focus {
 
 .aside-form {
   .form-sub {
-    height: 40px;
-  }
-  .submit {
     height: 40px;
   }
 }
