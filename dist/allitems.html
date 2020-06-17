@@ -19,14 +19,189 @@
   </head>
   <body>
     <section id="slide-cart">
-      <span id="cart-close"><i class="fa fa-times"></i></span>
-      <ul>
-        <li>Item 1</li>
-        <li>Item 1</li>
-        <li>Item 1</li>
-        <li>Item 1</li>
-        <li>Item 1</li>
-      </ul>
+      <div class="cart-header">
+        <h3>Cart</h3>
+        <span id="cart-close">&#215;</span>
+      </div>
+      <div class="cart-items-wrap">
+        <div class="cart-items-single">
+          <div class="cart-item-img">
+            <a href="">
+              <img src="./img/handbag2-img.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="cart-item-text">
+            <div class="cart-item-text-name">
+              Suade Shoe Men
+            </div>
+            <div class="cart-item-text-price">
+              &#8358;3,000
+            </div>
+            <div class="quantity-control">
+              <button
+                class="minus"
+                onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+              >
+                &#x2212;
+              </button>
+              <input min="1" max="100" value="5" type="number" />
+              <button
+                class="plus"
+                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+              >
+                &#x2b;
+              </button>
+            </div>
+          </div>
+          <span class="cart-item-remove">&#215;</span>
+        </div>
+        <div class="cart-items-single">
+          <div class="cart-item-img">
+            <a href="">
+              <img src="./img/slippers.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="cart-item-text">
+            <div class="cart-item-text-name">
+              Suade Shoe Men
+            </div>
+            <div class="cart-item-text-price">
+              &#8358;3,000
+            </div>
+            <div class="quantity-control">
+              <button
+                class="minus"
+                onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+              >
+                &#x2212;
+              </button>
+              <input min="1" max="100" value="5" type="number" />
+              <button
+                class="plus"
+                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+              >
+                &#x2b;
+              </button>
+            </div>
+          </div>
+          <span class="cart-item-remove">&#215;</span>
+        </div>
+        <div class="cart-items-single">
+          <div class="cart-item-img">
+            <a href="">
+              <img src="./img/watch.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="cart-item-text">
+            <div class="cart-item-text-name">
+              Suade Shoe Men
+            </div>
+            <div class="cart-item-text-price">
+              &#8358;3,000
+            </div>
+            <div class="quantity-control">
+              <button
+                class="minus"
+                onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+              >
+                &#x2212;
+              </button>
+              <input min="1" max="100" value="5" type="number" />
+              <button
+                class="plus"
+                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+              >
+                &#x2b;
+              </button>
+            </div>
+          </div>
+          <span class="cart-item-remove">&#215;</span>
+        </div>
+        <div class="cart-items-single">
+          <div class="cart-item-img">
+            <a href="">
+              <img src="./img/watch.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="cart-item-text">
+            <div class="cart-item-text-name">
+              Suade Shoe Men
+            </div>
+            <div class="cart-item-text-price">
+              &#8358;3,000
+            </div>
+            <div class="quantity-control">
+              <button
+                class="minus"
+                onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+              >
+                &#x2212;
+              </button>
+              <input min="1" max="100" value="5" type="number" />
+              <button
+                class="plus"
+                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+              >
+                &#x2b;
+              </button>
+            </div>
+          </div>
+          <span class="cart-item-remove">&#215;</span>
+        </div>
+        <div class="cart-items-single">
+          <div class="cart-item-img">
+            <a href="">
+              <img src="./img/watch2.jpg" alt="" />
+            </a>
+          </div>
+
+          <div class="cart-item-text">
+            <div class="cart-item-text-name">
+              Suade Shoe Men
+            </div>
+            <div class="cart-item-text-price">
+              &#8358;3,000
+            </div>
+            <div class="quantity-control">
+              <button
+                class="minus"
+                onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+              >
+                &#x2212;
+              </button>
+              <input min="1" max="100" value="5" type="number" />
+              <button
+                class="plus"
+                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+              >
+                &#x2b;
+              </button>
+            </div>
+          </div>
+          <span class="cart-item-remove">&#215;</span>
+        </div>
+      </div>
+      <div class="cart-total">
+        <div class="cart-total-sub">
+          <span class="cart-total-head">Subtotal</span>
+          <span class="cart-total-price">&#8358;4,000</span>
+        </div>
+        <div class="cart-total-delivery">
+          <span class="cart-total-head">Delivery Fee</span>
+          <span class="cart-total-price">&#8358;1,000</span>
+        </div>
+        <div class="cart-total-all">
+          <span class="cart-total-head">Total</span>
+          <span class="cart-total-all-price">&#8358;5,000</span>
+        </div>
+        <div class="cart-total-checkout">
+          <button class="btn-shop-now">Check Out</button>
+        </div>
+      </div>
     </section>
     <nav id="main-nav">
       <!-- <img src="img/logo.png" alt="My Portfolio" id="logo" /> -->
@@ -59,9 +234,28 @@
       </div>
     </nav>
     <nav id="minor-nav">
-      <div>Category</div>
+      <div class="parent-sub-menu">
+        <span>Category</span> <i class="fa fa-angle-down"></i>
+        <ul class="nav-sub-menu">
+          <li>
+            <a href="">Kitchen</a>
+          </li>
+          <li>
+            <a href="">Kitchen</a>
+          </li>
+          <li>
+            <a href="">Kitchen</a>
+          </li>
+          <li>
+            <a href="">Kitchen</a>
+          </li>
+          <li>
+            <a href="">Kitchen</a>
+          </li>
+        </ul>
+      </div>
       <div>
-        <ul>
+        <ul class="minor-nav-list">
           <li><a href="index.html" class="current">Home</a></li>
           <li><a href="allitems.html">All Items</a></li>
           <li><a href="work.html">Kitchen</a></li>
@@ -281,7 +475,161 @@
           <div class="main-prod-view-single">
             <div class="prod-img">
               <a href="">
-                <img src="./img/suade-img.jpg" alt="" />
+                <img src="./img/jacket.jpeg" alt="" />
+              </a>
+            </div>
+            <div class="prod-text">
+              <div class="prod-text-name">
+                Suade Shoe Men
+              </div>
+              <div class="stars" style="--rating: 3.5;"></div>
+              <div class="prod-text-price">
+                <del class="old-price">
+                  &#8358;100
+                </del>
+                <span class="new-price">
+                  &#8358;70
+                </span>
+              </div>
+              <button class="btn-add-to-cart">Add To Cart</button>
+            </div>
+          </div>
+          <div class="main-prod-view-single">
+            <div class="prod-img">
+              <a href="">
+                <img src="./img/jacket2.png" alt="" />
+              </a>
+            </div>
+            <div class="prod-text">
+              <div class="prod-text-name">
+                Suade Shoe Men
+              </div>
+              <div class="stars" style="--rating: 3.5;"></div>
+              <div class="prod-text-price">
+                <del class="old-price">
+                  &#8358;100
+                </del>
+                <span class="new-price">
+                  &#8358;70
+                </span>
+              </div>
+              <button class="btn-add-to-cart">Add To Cart</button>
+            </div>
+          </div>
+          <div class="main-prod-view-single">
+            <div class="prod-img">
+              <a href="">
+                <img src="./img/watch.jpg" alt="" />
+              </a>
+            </div>
+            <div class="prod-text">
+              <div class="prod-text-name">
+                Suade Shoe Men
+              </div>
+              <div class="stars" style="--rating: 3.5;"></div>
+              <div class="prod-text-price">
+                <del class="old-price">
+                  &#8358;100
+                </del>
+                <span class="new-price">
+                  &#8358;70
+                </span>
+              </div>
+              <button class="btn-add-to-cart">Add To Cart</button>
+            </div>
+          </div>
+          <div class="main-prod-view-single">
+            <div class="prod-img">
+              <a href="">
+                <img src="./img/slippers2.jpg" alt="" />
+              </a>
+            </div>
+            <div class="prod-text">
+              <div class="prod-text-name">
+                Suade Shoe Men
+              </div>
+              <div class="stars" style="--rating: 3.5;"></div>
+              <div class="prod-text-price">
+                <del class="old-price">
+                  &#8358;100
+                </del>
+                <span class="new-price">
+                  &#8358;70
+                </span>
+              </div>
+              <button class="btn-add-to-cart">Add To Cart</button>
+            </div>
+          </div>
+          <div class="main-prod-view-single">
+            <div class="prod-img">
+              <a href="">
+                <img src="./img/earpods.jpg" alt="" />
+              </a>
+            </div>
+            <div class="prod-text">
+              <div class="prod-text-name">
+                Suade Shoe Men
+              </div>
+              <div class="stars" style="--rating: 3.5;"></div>
+              <div class="prod-text-price">
+                <del class="old-price">
+                  &#8358;100
+                </del>
+                <span class="new-price">
+                  &#8358;70
+                </span>
+              </div>
+              <button class="btn-add-to-cart">Add To Cart</button>
+            </div>
+          </div>
+          <div class="main-prod-view-single">
+            <div class="prod-img">
+              <a href="">
+                <img src="./img/slippers.jpg" alt="" />
+              </a>
+            </div>
+            <div class="prod-text">
+              <div class="prod-text-name">
+                Suade Shoe Men
+              </div>
+              <div class="stars" style="--rating: 3.5;"></div>
+              <div class="prod-text-price">
+                <del class="old-price">
+                  &#8358;100
+                </del>
+                <span class="new-price">
+                  &#8358;70
+                </span>
+              </div>
+              <button class="btn-add-to-cart">Add To Cart</button>
+            </div>
+          </div>
+          <div class="main-prod-view-single">
+            <div class="prod-img">
+              <a href="">
+                <img src="./img/watch2.jpg" alt="" />
+              </a>
+            </div>
+            <div class="prod-text">
+              <div class="prod-text-name">
+                Suade Shoe Men
+              </div>
+              <div class="stars" style="--rating: 3.5;"></div>
+              <div class="prod-text-price">
+                <del class="old-price">
+                  &#8358;100
+                </del>
+                <span class="new-price">
+                  &#8358;70
+                </span>
+              </div>
+              <button class="btn-add-to-cart">Add To Cart</button>
+            </div>
+          </div>
+          <div class="main-prod-view-single">
+            <div class="prod-img">
+              <a href="">
+                <img src="./img/watch.jpg" alt="" />
               </a>
             </div>
             <div class="prod-text">

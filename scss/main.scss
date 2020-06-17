@@ -108,10 +108,29 @@ div[class^="btn-"],
   background: $main-color;
   z-index: 1;
   color: #feffff;
-  ul {
+  .parent-sub-menu {
+    position: relative;
+    cursor: pointer;
+    .nav-sub-menu {
+      display: block;
+      position: absolute;
+      top: 2.5rem;
+      background-color: red;
+    }
+
+    // &:hover {
+    //   .nav-sub-menu {
+    //     display: block;
+    //     position: absolute;
+    //     top: 2.5rem;
+    //     background-color: red;
+    //   }
+    // }
+  }
+
+  .minor-nav-list {
     display: flex;
     li {
-      position: relative;
       padding: 1rem 1.5rem;
     }
 
@@ -369,7 +388,7 @@ button#prev {
 }
 
 .market-info {
-  background-color: #2b7a78;
+  background-color: $main-color-dark;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
