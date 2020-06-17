@@ -583,12 +583,11 @@ button#prev {
   &-prod {
     flex: 4;
     background-color: #feffff;
-    //background-color: blue;
     padding: 0 1.5rem;
 
     .main-prod-view {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       grid-gap: 1rem;
       &-single {
         //border: 1px solid $medium-color;

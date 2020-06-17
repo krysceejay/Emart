@@ -45,4 +45,12 @@ $(document).ready(function () {
     //Run next slide at interval
     slideInterval = setInterval(nextSlide, intervalTime);
   }
+
+  $(".btn-add-to-cart").click(function () {
+    $("#slide-cart").addClass("show-cart");
+  });
+
+  $("#cart-close").click(function () {
+    $("#slide-cart").removeClass("show-cart");
+  });
 });

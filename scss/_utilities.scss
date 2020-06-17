@@ -271,3 +271,32 @@ select:focus {
     }
   }
 }
+
+#slide-cart {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: $main-light-color;
+  width: 25%;
+  height: 100%;
+  border-left: 1px solid #ccc;
+  z-index: 2;
+  opacity: 0.9;
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+
+  &.show-cart {
+    transform: translateX(0);
+  }
+
+  #cart-close {
+    display: flex;
+    justify-content: flex-end;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+}
