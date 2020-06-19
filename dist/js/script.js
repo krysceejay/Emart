@@ -53,4 +53,8 @@ $(document).ready(function () {
   $("#cart-close").click(function () {
     $("#slide-cart").removeClass("show-cart");
   });
+
+  $("#show-cat").click(function () {
+    $(".nav-sub-menu").toggleClass("show-cat");
+  });
 });

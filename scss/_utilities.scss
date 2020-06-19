@@ -109,6 +109,15 @@ hr {
     letter-spacing: 1px;
     width: 100%;
   }
+  &-small {
+    @extend %btn-shared;
+    //color: black
+    border-radius: 0;
+    background-color: $main-light-color;
+    padding: 0.5rem 1rem;
+    border: 1px solid $main-color;
+    letter-spacing: 1px;
+  }
 }
 
 button[class^="btn-"]:hover,
@@ -138,7 +147,7 @@ input[class^="btn-"]:focus {
     li {
       a {
         border-radius: 0;
-        padding: 0.6rem 1rem;
+        padding: 0.5rem 1rem;
         margin: auto 0.1rem;
         border: rgba(0, 0, 0, 0.1) 0.5px solid;
         &:hover,
