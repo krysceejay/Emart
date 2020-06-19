@@ -1,0 +1,24 @@
+{
+  "name": "emart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krysceejay/Emart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://krysceejay.github.io/emart"
+  "bugs": {
+    "url": "https://github.com/krysceejay/Emart/issues"
+  },
+  "homepage": "https://github.com/krysceejay/Emart#readme",
+  "dependencies": {
+    "gh-pages": "^3.0.0"
+  }
+}

@@ -57,4 +57,18 @@ $(document).ready(function () {
   $("#show-cat").click(function () {
     $(".nav-sub-menu").toggleClass("show-cat");
   });
+
+  $("#myBtn").click(function () {
+    $("#myModal").css("display", "block");
+  });
+
+  $("#closeModal").click(function () {
+    $("#myModal").css("display", "none");
+  });
+
+  $(window).click(function (e) {
+    if ($(e.target).is("#myModal")) {
+      $("#myModal").css("display", "none");
+    }
+  });
 });
