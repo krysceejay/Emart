@@ -65,6 +65,17 @@ hr {
     background-color: $main-color;
   }
 
+  &-pay {
+    @extend %btn-shared;
+    color: #fff;
+    background-color: $main-color;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    border: 0;
+    border-radius: 3px;
+    padding: 0.8rem 2rem;
+  }
+
   &-shop-now {
     @extend %btn-shared;
     color: #feffff;
@@ -458,6 +469,34 @@ select:focus {
   border: 1px solid #888;
   width: 45%;
   border-radius: 5px;
+
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //align-content: center;
+    text-align: center;
+    padding: 4rem 3rem;
+
+    &-img {
+      height: 80px;
+      margin-bottom: 2rem;
+      svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .payment-options {
+      h4 {
+        letter-spacing: 5px;
+        font-weight: bold;
+        color: $text-color;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
 }
 
 /* The Close Button */
