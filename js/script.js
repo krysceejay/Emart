@@ -71,4 +71,29 @@ $(document).ready(function () {
       $("#myModal").css("display", "none");
     }
   });
+
+  $(".all-imgs img").click(function () {
+    let imgSrc = $(this).attr("src");
+    $(this).addClass("active-img").siblings().removeClass("active-img");
+    $("#main-img").css("background-image", `url('${imgSrc}')`);
+  });
+
+  $("#main-img").mousemove(function (e) {
+    let width = $(this).width();
+    let height = $(this).height();
+
+    let mouseX = e.offsetX;
+    let mouseY = e.offsetY;
+
+    let posX = (mouseX / width) * 100;
+    let posY = (mouseY / height) * 100;
+
+    $(this).css("background-position", `${posX}% ${posY}%`);
+  });
+
+  $("#main-img").mouseout(function (e) {
+    $(this).css("background-position", "center");
+
+    //console.log(e);
+  });
 });
