@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const auto = true;
-  const intervalTime = 8000;
+  const intervalTime = 5000;
   let slideInterval;
 
   $("#next").click(function () {

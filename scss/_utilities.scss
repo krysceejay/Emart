@@ -95,6 +95,7 @@ hr {
     margin-top: 1rem;
     border: 0;
     padding: 0.8rem 2rem;
+    border-radius: 0;
   }
 
   &-filter {
@@ -111,14 +112,13 @@ hr {
   &-add-to-cart {
     @extend %btn-shared;
     border-radius: 0;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 0.6rem;
     border: 1px solid $main-color;
     font-size: 0.9rem;
     //font-weight: bold;
     background-color: $main-light-color;
     margin-top: 0.7rem;
     letter-spacing: 1px;
-    width: 100%;
   }
   &-small {
     @extend %btn-shared;
