@@ -932,6 +932,7 @@ button#prev {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 1rem;
+        padding: 0 2rem;
 
         img {
           border: 2px solid $medium-color;
@@ -976,6 +977,68 @@ button#prev {
         display: flex;
         justify-content: space-between;
         align-items: center;
+      }
+    }
+  }
+}
+
+#auth-sec {
+  .auth-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4fbfa;
+    border-radius: 5px;
+    width: 45%;
+    margin: auto;
+    padding: 1rem;
+
+    &-login {
+      width: 100%;
+      background-color: #feffff;
+      padding: 2rem;
+      border-radius: 5px;
+      .btn-auth {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 22px;
+          height: 22px;
+          margin-right: 0.5rem;
+        }
+        span {
+          font-size: 0.9rem;
+          letter-spacing: 1px;
+        }
+      }
+      .auth-or {
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      form {
+        .form-check {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          span {
+            font-size: 0.9rem;
+          }
+        }
+      }
+      .sign-up-link {
+        margin-top: 2.2rem;
+        span {
+          font-size: 0.8rem;
+          margin-right: 0.3rem;
+        }
+        a {
+          font-size: 0.9rem;
+          color: $main-color-dark;
+        }
       }
     }
   }
