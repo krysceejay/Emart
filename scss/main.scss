@@ -174,6 +174,7 @@ div[class^="btn-"],
 
 .slideshow-container {
   position: relative;
+  margin-bottom: 2rem;
 
   .slideshow {
     position: relative;
@@ -257,179 +258,29 @@ button#prev {
   }
 }
 
-#prod-sec {
-  &-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem auto;
-  }
-  &-content {
+#market {
+  background-color: $main-color-dark;
+  .market-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
-    h3 {
-      text-align: center;
-    }
-    .new-arrival {
-      //background-color: red;
-      &-prod {
-        margin: 1rem auto;
-        &-content {
-          display: flex;
-          margin: 2rem auto;
-          //justify-content: center;
-          .prod-img {
-            flex: 1;
-            width: 100%;
-            height: 120px;
-            margin-right: 1rem;
-            //border: 1px solid grey;
-            border-radius: 2px;
-            padding: 5px;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: contain;
-            }
-          }
-          .prod-text {
-            flex: 1;
-            &-name {
-              font-size: 1rem;
-              font-weight: bold;
-              color: $text-color;
-            }
-            &-price {
-              .old-price {
-                font-size: 1rem;
-                color: $medium-color;
-                margin-right: 0.5rem;
-              }
-              .new-price {
-                font-size: 1.1rem;
-                color: $dark-color;
-                font-weight: bold;
-              }
-            }
-          }
-        }
-      }
-    }
-    .best-sellers {
-      //background-color: red;
-      &-prod {
-        margin: 1rem auto;
-        &-content {
-          display: flex;
-          margin: 2rem auto;
-          //justify-content: center;
-          .prod-img {
-            flex: 1;
-            width: 100%;
-            height: 120px;
-            margin-right: 1rem;
-            //border: 1px solid grey;
-            border-radius: 2px;
-            padding: 5px;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: contain;
-            }
-          }
-          .prod-text {
-            flex: 1;
-            &-name {
-              font-size: 1rem;
-              font-weight: bold;
-              color: $text-color;
-            }
-            &-price {
-              .old-price {
-                font-size: 1rem;
-                color: $medium-color;
-                margin-right: 0.5rem;
-              }
-              .new-price {
-                font-size: 1.1rem;
-                color: $dark-color;
-                font-weight: bold;
-              }
-            }
-          }
-        }
-      }
-    }
-    .featured {
-      //background-color: red;
-      &-prod {
-        margin: 1rem auto;
-        &-content {
-          display: flex;
-          margin: 2rem auto;
-          //justify-content: center;
-          .prod-img {
-            flex: 1;
-            width: 100%;
-            height: 120px;
-            margin-right: 1rem;
-            //border: 1px solid grey;
-            border-radius: 2px;
-            padding: 5px;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: contain;
-            }
-          }
-          .prod-text {
-            flex: 1;
-            &-name {
-              font-size: 1rem;
-              font-weight: bold;
-              color: $text-color;
-            }
-            &-price {
-              .old-price {
-                font-size: 1rem;
-                color: $medium-color;
-                margin-right: 0.5rem;
-              }
-              .new-price {
-                font-size: 1.1rem;
-                color: $dark-color;
-                font-weight: bold;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+    grid-gap: 1rem;
+    text-align: center;
+    &-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fefefe;
 
-.market-info {
-  background-color: $main-color-dark;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 2rem;
-  &-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fefefe;
-
-    i {
-      margin-right: 1.5rem;
-    }
-    .m-text {
-      .head-text {
-        font-size: 1.2rem;
+      i {
+        margin-right: 1rem;
       }
-      .head-content {
-        font-size: 0.9rem;
+      .m-text {
+        .head-text {
+          font-size: 1.2rem;
+        }
+        .head-content {
+          font-size: 0.9rem;
+        }
       }
     }
   }
@@ -437,8 +288,9 @@ button#prev {
 
 #info {
   .info-links {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
 
     h3 {
       font-size: 1rem;
@@ -446,9 +298,11 @@ button#prev {
       color: $text-color;
       letter-spacing: 3px;
       margin-bottom: 1.5rem;
+      text-align: center;
     }
 
     &-contact {
+      margin: 1rem auto;
       div {
         margin-bottom: 0.8rem;
         i {
@@ -462,15 +316,21 @@ button#prev {
       }
     }
     &-quicklinks {
-      li a {
-        font-size: 0.9rem;
-        color: $secondary-color;
-        &:hover {
-          color: $main-color;
+      margin: 1rem auto;
+      li {
+        //text-align: center;
+        a {
+          font-size: 0.9rem;
+          color: $secondary-color;
+          text-align: center;
+          &:hover {
+            color: $main-color;
+          }
         }
       }
     }
     &-followus {
+      margin: 1rem auto;
       .social-media {
         display: flex;
         justify-content: space-between;
@@ -491,6 +351,7 @@ button#prev {
           margin: 0.9rem auto;
         }
         .appstore {
+          margin: auto;
           //background-color: red;
           height: 40px;
           width: 80%;
@@ -505,9 +366,12 @@ button#prev {
       }
     }
     &-sub {
+      margin: 1rem auto;
+      text-align: center;
       p {
         font-size: 0.9rem;
         letter-spacing: 1.5px;
+        margin-bottom: 0.8rem;
       }
     }
   }
@@ -1050,3 +914,5 @@ footer {
   color: $light-color;
   text-align: center;
 }
+//Import media query
+@import "media";
