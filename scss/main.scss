@@ -62,6 +62,10 @@ div[class^="btn-"],
   }
 }
 
+.menu-wrap {
+  display: none;
+}
+
 #main-nav {
   display: flex;
   //position: sticky;
@@ -115,13 +119,14 @@ div[class^="btn-"],
   top: 0;
   justify-content: space-around;
   align-items: center;
-  //padding: 0.2rem 2rem;
+  //padding: 1rem;
   background: $main-color;
   z-index: 1;
   color: #feffff;
   .parent-sub-menu {
     position: relative;
     cursor: pointer;
+    font-size: 1.2rem;
     .nav-sub-menu {
       display: none;
       position: absolute;
@@ -275,6 +280,7 @@ button#prev {
         margin-right: 1rem;
       }
       .m-text {
+        text-align: left;
         .head-text {
           font-size: 1.2rem;
         }
