@@ -578,12 +578,12 @@ select:focus {
   .more-items {
     background-color: #f4fbfa;
     border-radius: 3px;
-    //height: 150px;
     width: 100%;
     //border: 1px solid #ddd;
     display: flex;
     overflow-x: scroll;
     padding: 1rem;
+
     &::-webkit-scrollbar {
       display: none;
     }
@@ -595,6 +595,7 @@ select:focus {
       padding: 1rem;
       border-radius: 3px;
       background-color: #feffff;
+
       .add-more {
         &-img {
           //width: 100%;
@@ -640,3 +641,230 @@ select:focus {
     }
   }
 }
+
+.horizontal-scroll {
+  //background-color: #a9a9a9;
+  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 30px 0;
+}
+.item {
+  border: 1px solid #333;
+  display: inline-block;
+  width: 200px;
+  background-color: #feffff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 20px;
+  margin: 0 10px;
+  border-radius: 3px;
+  .add-more {
+    &-img {
+      //width: 100%;
+      height: 150px;
+      //border: 1px solid grey;
+      margin-bottom: 0.4rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &-name {
+        font-size: 1rem;
+        font-weight: bold;
+        color: $text-color;
+        margin-bottom: 0.4rem;
+      }
+      &-price {
+        margin-bottom: 0.4rem;
+        .old-price {
+          font-size: 1rem;
+          color: $medium-color;
+          margin-right: 0.5rem;
+        }
+        .new-price {
+          font-size: 1.1rem;
+          color: $dark-color;
+          font-weight: bold;
+        }
+      }
+
+      &-cart {
+        width: 100%;
+      }
+    }
+  }
+}
+
+$gutter: 10px;
+$colsBigDesktop: 4;
+$colsSmallDesktop: 3;
+
+::-webkit-scrollbar {
+  /* Webkit */
+  width: 0;
+  height: 0;
+}
+
+.hs {
+  display: flex;
+  overflow-x: scroll;
+  justify-content: space-between;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -20px;
+  &__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  &__headline {
+    flex: 1;
+    text-align: center;
+  }
+  &__arrows {
+    align-self: center;
+    .arrow {
+      &.disabled {
+        //filter: brightness(2);
+        color: $medium-color;
+      }
+      &.arrow-prev {
+        //transform: rotate(90deg);
+        margin-right: $gutter;
+      }
+      &.arrow-next {
+        //transform: rotate(-90deg);
+      }
+    }
+  }
+  &__item {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: calc(
+      100% / #{$colsBigDesktop} - (#{$gutter} * 2) - (20px / #{$colsBigDesktop})
+    );
+    //border: 1px solid $medium-color;
+    border-radius: 3px;
+    padding: 1rem;
+
+    // how it works: total width devided by columns minus left and right margin per box minus negativ margin of outer container.
+    // oh and IE11 does not support the shorthand "flex" with calc, so you have to use flex-basis etc. separately;
+    margin: $gutter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    user-select: none;
+    @media (max-width: 990px) {
+      flex-basis: calc(
+        100% / #{$colsSmallDesktop} - (#{$gutter} * 2) - (20px / #{$colsSmallDesktop})
+      );
+    }
+    @media (max-width: 520px) {
+      flex-basis: calc(
+        100% / #{2} - (#{$gutter} * 2) - (20px / #{$colsSmallDesktop})
+      );
+    }
+    &:last-child:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: $gutter;
+      height: 1px;
+      right: calc(#{$gutter} * 2 * -1);
+    }
+    &:first-child {
+      margin-left: calc(#{$gutter} * 2);
+    }
+    &__description {
+      //z-index: 1;
+      align-self: center;
+      margin: 10px 0;
+    }
+    &__title {
+      font-size: 1rem;
+      font-weight: bold;
+      color: $text-color;
+      //margin-bottom: 0.4rem;
+    }
+    &__subtitle {
+      .old-price {
+        font-size: 1rem;
+        color: $medium-color;
+        margin-right: 0.5rem;
+      }
+      .new-price {
+        font-size: 1.1rem;
+        color: $dark-color;
+        font-weight: bold;
+      }
+    }
+    &__image__wrapper {
+      position: relative;
+      width: 90%;
+      height: 0;
+      padding-bottom: 100%;
+    }
+    &__image {
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  // &__wrapper {
+  //   @media only screen and (min-width: 990px) {
+  //     overflow: hidden;
+  //   }
+  //   @media (hover: none) and (pointer: coarse) {
+  //     .hs__arrows {
+  //       display: none;
+  //     }
+  //     .hs__item {
+  //       flex: 1 0 calc(23% - #{$gutter} * 2);
+  //     }
+  //     @media only screen and (max-width: 990px) {
+  //       .hs__item {
+  //         flex: 1 0 calc(45% - #{$gutter} * 2);
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+/* Base Styling */
+
+// .container {
+//   max-width: $maxwidth;
+//   padding: calc(#{$gutter} * 2);
+//   margin: 0 auto;
+//   background: $darkest;
+//   mix-blend-mode: invert;
+//   position: relative;
+//   &:after {
+//     content: "";
+//     width: 100vw;
+//     height: 100%;
+//     background: $dark;
+//     position: absolute;
+//     left: 50%;
+//     top: 0;
+//     transform: translateX(-50%);
+//     z-index: -1;
+//   }
+//   @media only screen and (min-width: 990px) {
+//     padding: calc(#{$gutter} * 4) calc(#{$gutter} * 8);
+//   }
+// }
