@@ -22,6 +22,11 @@
   #detail-sec {
     margin: auto 2rem;
   }
+  #received-sec {
+    .received-section {
+      margin: 2rem;
+    }
+  }
 }
 @media (max-width: 1090px) {
   #main-sec {
@@ -49,6 +54,11 @@
       .cart-items-wrapper {
         padding: 1rem;
       }
+    }
+  }
+  #received-sec {
+    .received-section {
+      margin: 2rem;
     }
   }
 }
@@ -250,7 +260,7 @@
       align-items: center;
       li {
         padding: 0.4rem 1.5rem;
-        //font-size: 0.9rem;
+        font-size: 0.9rem;
       }
     }
   }

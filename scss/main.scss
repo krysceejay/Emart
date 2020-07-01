@@ -554,7 +554,7 @@ button#prev {
 #cart-sec {
   display: flex;
   justify-content: center;
-  margin: auto 5rem;
+  margin: auto 8rem;
   aside {
     flex: 1;
     margin-left: 1rem;
@@ -701,7 +701,7 @@ button#prev {
     display: flex;
     justify-content: center;
     // align-items: center;
-    margin: 3rem 5rem;
+    margin: 3rem 10rem;
 
     #received-sec-wrap {
       flex: 1;
@@ -911,6 +911,164 @@ button#prev {
         }
       }
     }
+  }
+}
+
+#review-sec {
+  .rev-sec-wrap {
+    // display: flex;
+    // justify-content: center;
+    //align-items: center;
+    // aside {
+    //   flex: 1;
+    //   background-color: red;
+    //   padding: 1rem 2rem;
+    // }
+
+    .bratings-main {
+      //flex: 2;
+      //background-color: blue;
+      min-height: 660px;
+      width: auto;
+      padding: 2rem 8rem;
+      &-stats {
+        display: flex;
+        //justify-content: space-between;
+        //background: $main-color;
+        //padding: 1rem 2rem;
+        height: 200px;
+        &-cal {
+          flex: 1;
+          //background: $light-color;
+          //margin-right: 2rem;
+          //padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          .rating-number {
+            font-size: 3rem;
+            .num-main {
+              font-weight: bold;
+            }
+          }
+          .stars {
+            font-size: 1.2rem;
+          }
+          .total-num-rating {
+            font-size: 0.9rem;
+            margin-top: 0.9rem;
+          }
+        }
+        &-progress {
+          flex: 2;
+          //background: green;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: 0.7rem;
+          .progress-d {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &-numberr {
+              //background: red;
+              //margin-right: 0.5rem;
+            }
+            &-onestar {
+              margin-left: 0.5rem;
+              font-size: 0.7rem;
+
+              &:before {
+                content: "★ ";
+                color: $star-color;
+              }
+            }
+            &-onerating {
+              color: $text-color;
+              margin-left: 0.5rem;
+            }
+            &-ratingprog {
+              flex: 2;
+              background: $star-background;
+              margin-left: 2rem;
+              height: 8px;
+              overflow: hidden;
+              border-radius: 5px;
+              //margin-bottom: 0.3rem;
+              div {
+                height: 100%;
+                width: var(--progwidth);
+                color: #fff;
+                background: #059e2e;
+                transition: 2s;
+                animation: animate 2s;
+              }
+            }
+          }
+        }
+      }
+      &-reviews {
+        margin-top: 1rem;
+        &-head {
+          margin: 2rem 0;
+          font-size: 1.2rem;
+          letter-spacing: 2px;
+          //background: blue;
+        }
+        &-card {
+          margin: 1rem 0;
+          background: #fafafa;
+          padding: 0.8rem;
+          border-radius: 5px;
+          &-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .reviews-stars {
+              $percent: calc(var(--userrating) / 5 * 100%);
+              font-size: 0.8rem;
+              &:before {
+                content: "★★★★★";
+                //color: $star-color;
+                background: linear-gradient(
+                  90deg,
+                  $star-color $percent,
+                  $star-background $percent
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+            }
+            .reviews-date {
+              font-size: 0.9rem;
+              color: $text-color;
+              font-style: italic;
+            }
+          }
+          &-body {
+            margin-top: 0.4rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            .reviewer {
+              font-style: italic;
+              font-size: 0.8rem;
+              text-align: right;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progwidth);
   }
 }
 
