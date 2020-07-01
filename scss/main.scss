@@ -502,6 +502,7 @@ button#prev {
       grid-gap: 1rem;
       &-single {
         //border: 1px solid $medium-color;
+        position: relative;
         padding: 0 1rem 1rem 1rem;
         border-radius: 3px;
 
@@ -527,6 +528,9 @@ button#prev {
             font-weight: bold;
             color: $text-color;
             margin-bottom: 0.4rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           &-price {
             margin-bottom: 0.4rem;

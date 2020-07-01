@@ -167,6 +167,27 @@ hr {
   }
 }
 
+%badge-shared {
+  padding: 0.5rem;
+  color: #feffff;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.badge {
+  &-new {
+    @extend %badge-shared;
+    background-color: #059e2e;
+  }
+  &-feat {
+    @extend %badge-shared;
+    background-color: #fcbe38;
+  }
+}
+
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
@@ -831,16 +852,16 @@ $colsSmallDesktop: 3;
       padding-bottom: 100%;
       //background-color: blue;
     }
-    .new-badge {
-      background-color: #059e2e;
-      padding: 0.5rem;
-      color: #feffff;
-      font-size: 0.7rem;
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+    // .new-badge {
+    //   background-color: #059e2e;
+    //   padding: 0.5rem;
+    //   color: #feffff;
+    //   font-size: 0.7rem;
+    //   border-radius: 50%;
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    // }
 
     &__image {
       pointer-events: none;
