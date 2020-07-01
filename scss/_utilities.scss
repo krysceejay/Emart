@@ -111,7 +111,7 @@ hr {
 
   &-add-to-cart {
     @extend %btn-shared;
-    border-radius: 0;
+    border-radius: 3px;
     padding: 0.5rem 0.6rem;
     border: 1px solid $main-color;
     font-size: 0.9rem;
